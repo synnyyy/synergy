@@ -1,14 +1,1 @@
-local executor = identifyexecutor()
-
-assert(executor ~= "Krnl" or executor ~= "Fluxus" and executor ~= "Electron", "Supported executors include: Krnl, Fluxus and Electron.")
-
-writefile("notif.mp3", game:HttpGet("https://github.com/synnyyy/synergy/raw/main/ProjectNova/assets/Windows_Notify_System_Generic.mp3"))
-print("Installed asset")
-
-if game.PlaceId == 8343259840 then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/main/ProjectNova/games/criminality.lua",true))()
-elseif game.PlaceId == 13772394625 then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/main/ProjectNova/games/ballblade.lua",true))()
-elseif game.PlaceId == 14732610803 then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/main/ProjectNova/games/ballblade.lua",true))()
-end
+local a=loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()local b=getcustomasset or getsynasset;writefile("notif.mp3",game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/ProjectNova/assets/Windows_Notify_System_Generic.mp3"))local c=Instance.new("Sound",workspace)c.SoundId=b("notif.mp3")c.Volume=1.35;c.Pitch=1;do a:Notify({Title="Project Nova",Content="Notice",SubContent="The new loadstring has been copied to your clipboard. Execute that from now on.",Duration=7})c:Play()setclipboard([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/ProjectNova/loader.lua",true))()]])end
