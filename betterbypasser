@@ -11,9 +11,9 @@ local Services = setmetatable({}, {
 
 
 local starterGui = Services.StarterGui
-setclipboard("https://discord.gg/QXq2KTVe4j")
+setclipboard([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))()]])
 starterGui:SetCore("SendNotification", {
-    Title = "On Maintenance",
-    Text = "BetterBypasser is on maintenance. Check back on the status of this script on discord.gg/QXq2KTVe4j. The link to the Discord Server has been pasted on your clipboard.",
+    Title = "Read me",
+    Text = "BetterBypasser has been moved to a new loadstring. Execute the loadstring pasted on your clipboard.",
     Duration = 5 -- Duration in seconds
 })
