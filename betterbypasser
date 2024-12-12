@@ -1,19 +1,23 @@
 repeat wait() until game:IsLoaded()
+
 local Services = setmetatable({}, {
     __index = function(_, serviceName)
-        local service = cache[serviceName]
-        if not service then
-            service = cloneref(game:GetService(serviceName))
-        end
-        return service
+        return cloneref(game:GetService(serviceName))
     end
 })
 
-
 local starterGui = Services.StarterGui
+
 setclipboard([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))()]])
+
 starterGui:SetCore("SendNotification", {
     Title = "Read me",
     Text = "BetterBypasser has been moved to a new loadstring. Execute the loadstring pasted on your clipboard.",
-    Duration = 5 -- Duration in seconds
+    Duration = 5
+})
+
+starterGui:SetCore("SendNotification", {
+    Title = "Deprecation warning",
+    Text = "This loadstring will no longer be executeable on the 15th of December.",
+    Duration = 5
 })
