@@ -5,18 +5,6 @@ local players = game:GetService("Players")
 local player = players.LocalPlayer
 local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
 
-
-local executor = identifyexecutor()
-local supportedexecutors = {"Synapse X", "ScriptWare", "Krnl", "Electron"}
-
-
-if not table.find(supportedexecutors, executor) then
-	player.Kick(player, "")
-    game.CoreGui.RobloxPromptGui.promptOverlay:WaitForChild("ErrorPrompt").MessageArea.ErrorFrame.ErrorMessage.Text = "You have a executor which cannot run Selenium. Please switch to Eletron, Krnl, ScriptWare or Synapse."
-    game.CoreGui.RobloxPromptGui.promptOverlay:WaitForChild("ErrorPrompt").TitleFrame.ErrorTitle.Text = "Unsupported Executor" 
-end
-
-
 local succ, err = pcall(function()
 
 
